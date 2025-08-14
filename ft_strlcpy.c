@@ -6,21 +6,11 @@
 /*   By: aarredon <aarredon@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 13:39:10 by aarredon          #+#    #+#             */
-/*   Updated: 2025/08/08 02:10:00 by aarredon         ###   ########.fr       */
+/*   Updated: 2025/08/15 01:02:07 by aarredon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
+#include "libft.h" //"../libft.h"
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
