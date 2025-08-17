@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aarredon <aarredon@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/15 01:08:21 by aarredon          #+#    #+#             */
-/*   Updated: 2025/08/17 15:21:17 by aarredon         ###   ########.fr       */
+/*   Created: 2025/08/17 12:56:54 by aarredon          #+#    #+#             */
+/*   Updated: 2025/08/17 15:21:14 by aarredon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+int ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-    unsigned char *d;
-    const unsigned char *s;
+    size_t i;
 
-    d = dest;
-    s = src;
-    if (d > s)
+    i = 0;
+    while(i < n && s1[i] && s1[i] == s2[i])
     {
-        while(n)
-        {
-            n--;
-            d[n] = s[n];
-        }
-    }else
-    {
-        while(n--)
-        {
-            *d++ = *s++;
-        }
+        i++;
     }
-    return dest;
+    return (s1[i] - s2[i]);
 }
+
+// int main(void)
+// {
+//     char *c1 = "Hol";
+//     char *c2 = "Hola";
+
+//     printf("%d\n", ft_strncmp(c1, c2, 5));
+// }

@@ -1,37 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aarredon <aarredon@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/15 01:08:21 by aarredon          #+#    #+#             */
-/*   Updated: 2025/08/17 15:21:17 by aarredon         ###   ########.fr       */
+/*   Created: 2025/08/17 12:39:08 by aarredon          #+#    #+#             */
+/*   Updated: 2025/08/17 15:21:08 by aarredon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+char *ft_strrchr(const char *s, int c)
 {
-    unsigned char *d;
-    const unsigned char *s;
+    int i;
 
-    d = dest;
-    s = src;
-    if (d > s)
+    if (!s) return NULL;
+    i = ft_strlen(s);
+    while(i >= 0 && s[i] != (char)c)
     {
-        while(n)
-        {
-            n--;
-            d[n] = s[n];
-        }
-    }else
-    {
-        while(n--)
-        {
-            *d++ = *s++;
-        }
+        i--;
     }
-    return dest;
+    if (i == -1)
+        return NULL;
+    else
+        return &((char *)s)[i];
 }

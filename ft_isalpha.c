@@ -6,11 +6,11 @@
 /*   By: aarredon <aarredon@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 11:59:51 by aarredon          #+#    #+#             */
-/*   Updated: 2025/08/08 02:21:52 by aarredon         ###   ########.fr       */
+/*   Updated: 2025/08/17 13:53:46 by aarredon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int c)
 {
-	return (c >= 'a' && c <= 'z' || c>= 'A' && c <= 'Z');
+	return ((c >= 'a' && c <= 'z') || (c>= 'A' && c <= 'Z'));
 }

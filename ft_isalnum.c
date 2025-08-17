@@ -6,11 +6,13 @@
 /*   By: aarredon <aarredon@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/15 01:04:10 by aarredon          #+#    #+#             */
-/*   Updated: 2025/08/15 01:05:13 by aarredon         ###   ########.fr       */
+/*   Updated: 2025/08/17 15:14:54 by aarredon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isalnum(int c)
 {
-	return ((c >= 'a' && c <= 'z' || c>= 'A' && c <= 'Z') || (c >= '0' && c <= '9'));
+	return (ft_isalpha(c) || ft_isdigit(c));
 }

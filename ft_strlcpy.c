@@ -6,11 +6,11 @@
 /*   By: aarredon <aarredon@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 13:39:10 by aarredon          #+#    #+#             */
-/*   Updated: 2025/08/15 01:02:07 by aarredon         ###   ########.fr       */
+/*   Updated: 2025/08/17 15:21:15 by aarredon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h" //"../libft.h"
+#include "libft.h"
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {

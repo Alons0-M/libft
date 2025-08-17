@@ -6,23 +6,11 @@
 /*   By: aarredon <aarredon@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/31 13:14:54 by aarredon          #+#    #+#             */
-/*   Updated: 2025/08/08 02:31:47 by aarredon         ###   ########.fr       */
+/*   Updated: 2025/08/17 14:17:44 by aarredon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
 
 char *ft_strdup(char *src)
 {
@@ -46,10 +34,10 @@ char *ft_strdup(char *src)
 	return dst;
 }
 
-//#include <stdio.h>
-//
-//int main() {
+// #include <stdio.h>
+
+// int main() {
 //    char str[] = "--++-+--5345as4d-+3";
 //    printf("%s", ft_strdup(str)); 
 //    return 0;
-//}
+// }

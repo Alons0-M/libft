@@ -6,13 +6,13 @@
 /*   By: aarredon <aarredon@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/15 00:28:39 by aarredon          #+#    #+#             */
-/*   Updated: 2025/08/15 00:59:52 by aarredon         ###   ########.fr       */
+/*   Updated: 2025/08/17 13:50:52 by aarredon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h" //"../libft.h"
 
-void bzero(void *s, size_t n)
+void ft_bzero(void *s, size_t n)
 {
     unsigned char *ptr;
     
@@ -21,5 +21,4 @@ void bzero(void *s, size_t n)
     {
         *ptr++ = 0;
     }
-    return s;
 }
