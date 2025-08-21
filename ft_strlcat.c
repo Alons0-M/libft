@@ -6,15 +6,17 @@
 /*   By: aarredon <aarredon@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 19:19:07 by aarredon          #+#    #+#             */
-/*   Updated: 2025/07/26 16:49:00 by aarredon         ###   ########.fr       */
+/*   Updated: 2025/08/20 01:11:57 by aarredon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+#include "libft.h"
+
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	unsigned int	i;
-	unsigned int	dest_size;
-	unsigned int	src_size;
+	size_t	i;
+	size_t dest_size;
+	size_t	src_size;
 
 	dest_size = 0;
 	while (dest[dest_size] && dest_size < size)

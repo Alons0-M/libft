@@ -6,13 +6,13 @@
 /*   By: aarredon <aarredon@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 12:26:32 by aarredon          #+#    #+#             */
-/*   Updated: 2025/08/08 02:26:39 by aarredon         ###   ########.fr       */
+/*   Updated: 2025/08/20 10:18:13 by aarredon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_toupper(int c)
 {
-	if (c >= 'a' || c <= 'z')
+	if (c >= 'a' && c <= 'z')
 		return (c - 32);
 	else
 		return c;

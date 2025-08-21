@@ -6,22 +6,22 @@
 /*   By: aarredon <aarredon@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 13:39:10 by aarredon          #+#    #+#             */
-/*   Updated: 2025/08/17 15:21:15 by aarredon         ###   ########.fr       */
+/*   Updated: 2025/08/20 10:39:13 by aarredon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	if (!dest || !src)
 		return 0;
 	if (size != 0)
 	{
-		while (src[i] != '\0' && i < size - 1)
+		while (src[i] && i < size - 1)
 		{
 			dest[i] = src[i];
 			i++;
@@ -37,7 +37,7 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 // {
 //     char src[] = "Hello";
 //     char dest[10];
-//     unsigned int n = 8;
+//     size_t n = 8;
 
 //     printf("Test 1:\n");
 //     printf("src = \"%s\", dest = \"%s\"\n", src, dest);
@@ -59,9 +59,9 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 //     ft_strlcpy(dest3, src3, n3);
 //     printf("src = \"%s\", dest = \"%s\"\n", src3, dest3);
 
-//     printf("\nTest 4:\n");
-//     char *result = ft_strlcpy(NULL, src, n);
-//     printf("NULL: %s\n", result ? "OK" : "NULL");
+//     // printf("\nTest 4:\n");
+//     // char *result = ft_strlcpy(NULL, src, n);
+//     // printf("NULL: %s\n", result ? "OK" : "NULL");
 
 //     return (0);
 // }
