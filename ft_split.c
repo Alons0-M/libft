@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aarredon <aarredon@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/15 00:28:39 by aarredon          #+#    #+#             */
-/*   Updated: 2025/08/21 18:37:46 by aarredon         ###   ########.fr       */
+/*   Created: 2025/08/22 01:37:47 by aarredon          #+#    #+#             */
+/*   Updated: 2025/08/22 01:38:22 by aarredon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+char **ft_split(char const *s, char c)
 {
-    unsigned char *ptr;
     
-    ptr = s; 
-    while(n--)
-    {
-        *ptr++ = 0;
-    }
 }
