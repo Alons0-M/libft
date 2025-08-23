@@ -6,19 +6,19 @@
 /*   By: aarredon <aarredon@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/15 00:28:39 by aarredon          #+#    #+#             */
-/*   Updated: 2025/08/21 18:37:46 by aarredon         ###   ########.fr       */
+/*   Updated: 2025/08/24 00:19:23 by aarredon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    unsigned char *ptr;
-    
-    ptr = s; 
-    while(n--)
-    {
-        *ptr++ = 0;
-    }
+	unsigned char	*ptr;
+
+	ptr = s;
+	while (n--)
+	{
+		*ptr++ = 0;
+	}
 }

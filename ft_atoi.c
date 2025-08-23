@@ -6,16 +6,16 @@
 /*   By: aarredon <aarredon@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 19:07:12 by aarredon          #+#    #+#             */
-/*   Updated: 2025/08/21 19:27:24 by aarredon         ###   ########.fr       */
+/*   Updated: 2025/08/24 00:12:29 by aarredon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-	int atoi;
-	int neg;
+	int	atoi;
+	int	neg;
 
 	atoi = 0;
 	if (str)
@@ -35,7 +35,7 @@ int ft_atoi(const char *str)
 		if (neg % 2 == 1)
 			atoi *= -1;
 	}
-	return atoi;
+	return (atoi);
 }
 
 // #include <stdio.h>
@@ -43,5 +43,5 @@ int ft_atoi(const char *str)
 // int main() {
 //     char str[] = "--++-+--5345as4d-+3";//"-";
 //     printf("%d", ft_atoi(str));
-//     return 0;
+//     return (0);
 // }

@@ -6,38 +6,36 @@
 /*   By: aarredon <aarredon@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/31 13:14:54 by aarredon          #+#    #+#             */
-/*   Updated: 2025/08/17 14:17:44 by aarredon         ###   ########.fr       */
+/*   Updated: 2025/08/24 00:15:46 by aarredon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(char *src)
+char	*ft_strdup(char *src)
 {
-	int len;
-	char *dst;
-	int i;
-	
-	//if (!src)
-	//	return (NULL); //not needed with check of dst?
+	int		len;
+	char	*dst;
+	int		i;
+
 	i = 0;
 	len = ft_strlen(src);
-	dst = (char *)malloc((len+1) * sizeof(char));
+	dst = (char *)malloc((len + 1) * sizeof(char));
 	if (dst == NULL)
 		return (0);
-	while(src[i])
+	while (src[i])
 	{
 		dst[i] = src[i];
 		i++;
 	}
 	dst[i] = '\n';
-	return dst;
+	return (dst);
 }
 
 // #include <stdio.h>
 
 // int main() {
 //    char str[] = "--++-+--5345as4d-+3";
-//    printf("%s", ft_strdup(str)); 
-//    return 0;
+//    printf("%s", ft_strdup(str));
+//    return (0);
 // }

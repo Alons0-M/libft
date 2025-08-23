@@ -6,11 +6,11 @@
 /*   By: aarredon <aarredon@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 02:21:19 by aarredon          #+#    #+#             */
-/*   Updated: 2025/08/08 02:22:14 by aarredon         ###   ########.fr       */
+/*   Updated: 2025/08/24 00:18:16 by aarredon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(int c)
 {
-    return (c >= 0 && c <= 127);
+	return (c >= 0 && c <= 127);
 }

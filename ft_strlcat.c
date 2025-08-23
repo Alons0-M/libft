@@ -6,7 +6,7 @@
 /*   By: aarredon <aarredon@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 19:19:07 by aarredon          #+#    #+#             */
-/*   Updated: 2025/08/20 01:11:57 by aarredon         ###   ########.fr       */
+/*   Updated: 2025/08/24 00:16:10 by aarredon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	i;
-	size_t dest_size;
+	size_t	dest_size;
 	size_t	src_size;
 
 	dest_size = 0;

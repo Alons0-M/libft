@@ -6,7 +6,7 @@
 /*   By: aarredon <aarredon@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 13:39:10 by aarredon          #+#    #+#             */
-/*   Updated: 2025/08/20 10:39:13 by aarredon         ###   ########.fr       */
+/*   Updated: 2025/08/24 00:16:19 by aarredon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 
 	i = 0;
 	if (!dest || !src)
-		return 0;
+		return (0);
 	if (size != 0)
 	{
 		while (src[i] && i < size - 1)
