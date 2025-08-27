@@ -6,7 +6,7 @@
 /*   By: aarredon <aarredon@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 21:01:56 by aarredon          #+#    #+#             */
-/*   Updated: 2025/08/24 00:21:31 by aarredon         ###   ########.fr       */
+/*   Updated: 2025/08/27 16:48:45 by aarredon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*str;
 
 	if (!s || start >= strlen(s))
-		return (NULL);
+		return (ft_strdup(""));
 	str = (char *)malloc((len + 1) * sizeof(char));
 	if (str)
 	{
 		ft_strlcpy(str, &s[start], len + 1);
 		return (str);
 	}
-	return (NULL);
+	return (ft_strdup(""));
 }
 
 // int	main(void)

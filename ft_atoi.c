@@ -6,7 +6,7 @@
 /*   By: aarredon <aarredon@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 19:07:12 by aarredon          #+#    #+#             */
-/*   Updated: 2025/08/24 00:12:29 by aarredon         ###   ########.fr       */
+/*   Updated: 2025/08/25 17:32:05 by aarredon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,34 +14,44 @@
 
 int	ft_atoi(const char *str)
 {
-	int	atoi;
+	long atoi;
+	int	i;
 	int	neg;
 
 	atoi = 0;
-	if (str)
+	if (!str)
+		return (atoi);
+	neg = 0;
+	i = 0;
+	while ((str[i] >= '\t' && str[i] <= '\r') || str[i] == ' ')
+		i++;
+	if (str[i] == '-' || str[i] == '+')
 	{
-		neg = 0;
-		while (*str && atoi == 0)
-		{
-			if (*str == '-')
-				neg++;
-			while (*str && ft_isdigit(*str))
-			{
-				atoi = atoi * 10 + (*str - '0');
-				str++;
-			}
-			str++;
-		}
-		if (neg % 2 == 1)
-			atoi *= -1;
+		if (str[i] == '-')
+			neg = 1;
+		i++;
 	}
-	return (atoi);
+	while(str[i] && ft_isdigit(str[i]))
+	{
+		atoi = atoi * 10 + (str[i] - '0');
+		i++;
+	}
+	if (neg)
+		atoi = -atoi;
+	return ((int)atoi);
 }
 
 // #include <stdio.h>
 
 // int main() {
-//     char str[] = "--++-+--5345as4d-+3";//"-";
-//     printf("%d", ft_atoi(str));
+// 	printf("int: %d\n", sizeof(long));
+// 	char str[] = "-1";
+//     // printf("%d\n", ft_atoi(str));
+// 	// printf("%d\n", ft_atoi("1"));
+// 	// printf("%d\n", ft_atoi("\t\r+1"));
+// 	// printf("%d\n", ft_atoi("+42as3"));
+// 	// printf("%d\n", ft_atoi("101"));
+// 	printf("%d\n", ft_atoi("-2147483648"));
+// 	printf("%d\n", ft_atoi("2147483648"));
 //     return (0);
 // }

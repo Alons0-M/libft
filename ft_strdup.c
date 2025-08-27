@@ -6,7 +6,7 @@
 /*   By: aarredon <aarredon@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/31 13:14:54 by aarredon          #+#    #+#             */
-/*   Updated: 2025/08/24 00:15:46 by aarredon         ###   ########.fr       */
+/*   Updated: 2025/08/27 16:40:01 by aarredon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,16 @@ char	*ft_strdup(char *src)
 		dst[i] = src[i];
 		i++;
 	}
-	dst[i] = '\n';
+	dst[i] = '\0';
 	return (dst);
 }
 
 // #include <stdio.h>
 
 // int main() {
-//    char str[] = "--++-+--5345as4d-+3";
+//    char str[] = "lorem ipsum dolor sit amet";
 //    printf("%s", ft_strdup(str));
+//    printf("%s", ft_strdup("coucou"));
+//    printf("%s", ft_strdup(""));
 //    return (0);
 // }

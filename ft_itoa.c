@@ -6,7 +6,7 @@
 /*   By: aarredon <aarredon@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/24 00:24:37 by aarredon          #+#    #+#             */
-/*   Updated: 2025/08/24 02:20:38 by aarredon         ###   ########.fr       */
+/*   Updated: 2025/08/27 16:45:44 by aarredon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ static char	*itoa(int n, char *str, int len)
 	str[len] = '\0';
 	while (n > 0)
 	{
-		printf("%d\n", len);
 		str[--len] = (n % 10) + '0';
 		n /= 10;
 	}
@@ -52,6 +51,10 @@ char	*ft_itoa(int n)
 	char	*str;
 	int		len;
 
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	if (n == 0)
+		return (ft_strdup("0"));
 	len = numlen(n);
 	str = (char *)malloc((len + 1) * sizeof(char));
 	if (!str)
@@ -60,7 +63,7 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
-int	main(void)
-{
-	printf("%s\n", ft_itoa(-4233));
-}
+// int	main(void)
+// {
+// 	printf("%s\n", ft_itoa(-4233));
+// }

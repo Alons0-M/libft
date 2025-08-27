@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aarredon <aarredon@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/21 18:31:59 by aarredon          #+#    #+#             */
-/*   Updated: 2025/08/25 17:34:26 by aarredon         ###   ########.fr       */
+/*   Created: 2025/08/24 02:21:54 by aarredon          #+#    #+#             */
+/*   Updated: 2025/08/24 11:13:21 by aarredon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_calloc(size_t nmemb, size_t size)
+char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	void	*ptr;
-
-	ptr = malloc(nmemb * size);
-	if (ptr)
-		memset(ptr, 0, nmemb * size);
-	return (ptr);
+    (void)s;
+    (void)f;
+    return 0;
 }
