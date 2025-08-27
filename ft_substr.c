@@ -6,7 +6,7 @@
 /*   By: aarredon <aarredon@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 21:01:56 by aarredon          #+#    #+#             */
-/*   Updated: 2025/08/27 16:48:45 by aarredon         ###   ########.fr       */
+/*   Updated: 2025/08/27 17:04:51 by aarredon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,13 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
+	size_t	strlen;
 
-	if (!s || start >= strlen(s))
+	strlen = ft_strlen(s);
+	if (!s || start >= strlen)
 		return (ft_strdup(""));
+	if (len > strlen - start)
+		len = strlen - start;
 	str = (char *)malloc((len + 1) * sizeof(char));
 	if (str)
 	{
@@ -29,6 +33,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 // int	main(void)
 // {
-// 	char s1[] = "Holaadios";
-// 	printf("%s", ft_substr(s1, 4, 5));
+// 	char s1[] = "0123456789";
+// 	printf("%s", ft_substr(s1, 9, 10));
 // }
