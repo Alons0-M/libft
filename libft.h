@@ -6,7 +6,7 @@
 /*   By: aarredon <aarredon@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 00:06:23 by aarredon          #+#    #+#             */
-/*   Updated: 2025/08/28 13:59:50 by aarredon         ###   ########.fr       */
+/*   Updated: 2025/08/28 14:24:33 by aarredon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 #endif
