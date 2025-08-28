@@ -6,7 +6,7 @@
 /*   By: aarredon <aarredon@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 19:07:12 by aarredon          #+#    #+#             */
-/*   Updated: 2025/08/25 17:32:05 by aarredon         ###   ########.fr       */
+/*   Updated: 2025/08/28 14:01:40 by aarredon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	long atoi;
-	int	i;
-	int	neg;
+	long	atoi;
+	int		i;
+	int		neg;
 
 	atoi = 0;
 	if (!str)
@@ -31,7 +31,7 @@ int	ft_atoi(const char *str)
 			neg = 1;
 		i++;
 	}
-	while(str[i] && ft_isdigit(str[i]))
+	while (str[i] && ft_isdigit(str[i]))
 	{
 		atoi = atoi * 10 + (str[i] - '0');
 		i++;
