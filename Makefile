@@ -7,10 +7,16 @@ SRCS = ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 	ft_strrchr.c ft_tolower.c ft_toupper.c ft_memchr.c ft_memcmp.c \
 	ft_strnstr.c ft_atoi.c ft_calloc.c ft_substr.c ft_strjoin.c \
 	ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
-	ft_putchar_fd ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
+	ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 OBJS = $(SRCS:.c=.o)
 
+SRCS_BONUS = ft_lstnew.c
+OBJS_BONUS = $(SRCS_BONUS:.c=.o)
+
 all: $(NAME)
+
+bonus: $(NAME) $(OBJS_BONUS)
+	ar rs $(NAME) $(OBJS_BONUS)
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
@@ -29,4 +35,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
