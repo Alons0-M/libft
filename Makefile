@@ -10,7 +10,7 @@ SRCS = ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 	ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 OBJS = $(SRCS:.c=.o)
 
-SRCS_BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c
+SRCS_BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 
 all: $(NAME)
