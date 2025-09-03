@@ -1,3 +1,4 @@
 # libft
 
-In progress
+All mandatory done. 
+Bonus in progress.
