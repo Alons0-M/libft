@@ -6,7 +6,7 @@
 /*   By: aarredon <aarredon@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 21:16:59 by aarredon          #+#    #+#             */
-/*   Updated: 2025/08/24 00:14:56 by aarredon         ###   ########.fr       */
+/*   Updated: 2025/09/05 02:30:07 by aarredon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,13 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		len1;
 	int		len2;
 
+	if (!s1 || !s2)
+		return (NULL);
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
 	str = (char *)malloc((len1 + len2 + 1) * sizeof(char));
+	if (!str)
+		return (NULL);
 	ft_strlcpy(str, s1, len1 + 1);
 	ft_strlcpy(&str[len1], s2, len2 + 1);
 	return (str);

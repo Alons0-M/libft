@@ -6,7 +6,7 @@
 /*   By: aarredon <aarredon@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 01:37:47 by aarredon          #+#    #+#             */
-/*   Updated: 2025/08/23 22:29:51 by aarredon         ###   ########.fr       */
+/*   Updated: 2025/09/05 02:58:11 by aarredon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static int	strlenchr(char const *s, char end)
 	return (len);
 }
 
-static void	allocword(char **result, int j, int len)
+static int	allocword(char **result, int j, int len)
 {
 	int	i;
 
@@ -56,8 +56,9 @@ static void	allocword(char **result, int j, int len)
 			i++;
 		}
 		free(result);
-		result = NULL;
+		return (0);
 	}
+	return (1);
 }
 
 char	**ft_split(char const *s, char c)
@@ -79,8 +80,7 @@ char	**ft_split(char const *s, char c)
 		while (*s == c)
 			s++;
 		len = strlenchr(s, c);
-		allocword(result, j, len);
-		if (!result)
+		if (!allocword(result, j, len))
 			return (NULL);
 		ft_strlcpy(result[j], s, len + 1);
 		s += len + 1;
