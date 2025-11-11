@@ -6,7 +6,7 @@
 /*   By: aarredon <aarredon@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/24 00:24:37 by aarredon          #+#    #+#             */
-/*   Updated: 2025/08/28 16:12:03 by aarredon         ###   ########.fr       */
+/*   Updated: 2025/09/09 10:02:47 by aarredon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static int	numlen(int n)
 	return (len);
 }
 
-static char	*itoa(int n, char *str, int len)
+static char	*itoa2(int n, char *str, int len)
 {
 	if (n < 0)
 	{
@@ -59,7 +59,7 @@ char	*ft_itoa(int n)
 	str = (char *)malloc((len + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
-	itoa(n, str, len);
+	itoa2(n, str, len);
 	return (str);
 }
 
